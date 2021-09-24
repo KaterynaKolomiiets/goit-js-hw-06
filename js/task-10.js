@@ -21,6 +21,9 @@ const boxesEl = document.querySelector("#boxes");
 const minValue = Number(inputEl.getAttribute("min"));
 const maxValue = Number(inputEl.getAttribute("max"));
 
+let height = 30;
+let width = 30;
+
 const getValue = function () {
   let value = Number(inputEl.value);
 
@@ -32,8 +35,6 @@ const getValue = function () {
 };
 
 const createBoxes = function (value) {
-  let height = 30;
-  let width = 30;
 
   for (let i = 0; i < value; i++) {
     let el = document.createElement("div");
@@ -51,6 +52,8 @@ const createBoxes = function (value) {
 
 const removeBoxes = function () {
   boxesEl.textContent = "";
+  height = 30;
+  width = 30;
 };
 
 createBtnEl.addEventListener("click", getValue);
