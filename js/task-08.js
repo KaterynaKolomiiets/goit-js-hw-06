@@ -23,6 +23,7 @@ const onFormSubmit = function (e) {
   for (const input of inputs) {
     if (!input.value) {
       alert("Все поля должны быть заполнены!");
+      return
     }
     objFormData[input.name] = input.value;
   }
