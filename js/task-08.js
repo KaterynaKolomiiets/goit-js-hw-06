@@ -24,8 +24,7 @@ const onFormSubmit = function (e) {
     if (!input.value) {
       alert("Все поля должны быть заполнены!");
     }
-    objFormData.key = input.name;
-    objFormData.name = input.localName;
+    objFormData[input.name] = input.value;
   }
   console.log(objFormData);
   formEl.reset();

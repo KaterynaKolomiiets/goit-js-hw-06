@@ -40,6 +40,7 @@ const createBoxes = function (value) {
     el.style.backgroundColor = getRandomHexColor();
     el.style.height = `${height}px`;
     el.style.width = `${height}px`;
+    el.style.border = "1px dashed black"
 
     height += 10;
     width += 10;
